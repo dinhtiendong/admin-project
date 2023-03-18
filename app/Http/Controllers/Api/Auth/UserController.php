@@ -13,4 +13,11 @@ class UserController extends Controller
         //
         return view('home');
     }
+    
+    public function login(Request $request){
+    	$array = array(
+            'list' => "GJDLSGJD"
+        );
+        return response()->json($array, 200);
+    }
 }

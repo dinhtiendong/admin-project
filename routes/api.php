@@ -20,3 +20,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // Lấy danh người dùng
 Route::get('users', 'Api\Auth\UserController@index')->name('users.index');
+
+Route::group(
+    [           
+        'namespace' => 'App\Http\Controllers\Api\Auth',
+        'prefix' => 'auth',
+    ], function(){
+        Route::post('login', ['uses'=>'UserController@login']);
+        //Route::get('register', ['uses'=>'UserController@register']);
+});
