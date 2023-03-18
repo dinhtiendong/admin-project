@@ -13,8 +13,9 @@ class UserController extends Controller
         //
         return view('home');
     }
-    
+
     public function login(Request $request){
+        print_r($request->post());
     	$array = array(
             'list' => "GJDLSGJD"
         );
