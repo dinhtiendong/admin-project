@@ -14,8 +14,12 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/','homeController@index');
+Route::get('/','LoginController@index');
 Auth::routes();
 
-Route::get('/home','homeController@index')->name('home');
+Route::get('/home','LoginController@index')->name('home');
 ;
+
+Route::get('/greeting', function () {
+    return 'Hello World';
+});
